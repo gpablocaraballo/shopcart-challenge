@@ -38,10 +38,10 @@ export default function Item ({ item }: ItemProp) {
     <ListItem>
       {item.image_url && !imageFailed
         ? (
-            <img width={200} height={200} src={get(item, 'image_url', '')} onError={() => setImageFailed(true)} />
+            <img alt="Product Image" width={200} height={200} src={get(item, 'image_url', '')} onError={() => setImageFailed(true)} />
           )
         : (
-            <ImgUnvavailable width={200} height={200} src="/assets/no-image.png" alt="unavailable" />
+            <ImgUnvavailable alt="Image unavailable" width={200} height={200} src="/assets/no-image.png" />
           )}
       <ItemName>{item.name}</ItemName>
       <ItemFooter>
@@ -49,7 +49,7 @@ export default function Item ({ item }: ItemProp) {
           <ItemPriceValue>{item.price_per_unit}</ItemPriceValue>
           <ItemPriceCurrency>$</ItemPriceCurrency>
         </ItemPrice>
-        <ButtonBox onClick={onItemClicked}>Ir al detalle</ButtonBox>
+        <ButtonBox data-testid="Item-button-go-detail" onClick={onItemClicked}>Ir al detalle</ButtonBox>
       </ItemFooter>
       <CartOperations item={item} />
     </ListItem>
