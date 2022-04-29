@@ -52,7 +52,10 @@ export const DataContainerText = styled.div`
     height: 350px;
     display: flex;
     flex-direction: column;
-    justify-content: center; 
+    justify-content: center;
+    @media (max-width: ${themeConfig.screen.medium.maxWidthPx}px){
+        width: 100%;
+    }    
 `
 
 export const ImgUnvavailable = styled(Image)`
@@ -72,7 +75,7 @@ export const ItemName = styled.div`
     color: ${themeConfig.color.Items};
     font-weight: 400;
     font-size: 30px;
-    @media (max-width: ${themeConfig.screen.small.maxWidthPx}px){
+    @media (max-width: ${themeConfig.screen.medium.maxWidthPx}px){
         font-size: 20px;
     }
 `

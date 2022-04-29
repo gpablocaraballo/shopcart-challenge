@@ -6,7 +6,7 @@ const themeConfig = {
       maxWidthPx: 350
     },
     medium: {
-      maxWidthPx: 599
+      maxWidthPx: 760
     },
     large: {
       maxWidthPx: 1275
