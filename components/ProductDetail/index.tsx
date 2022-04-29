@@ -15,7 +15,8 @@ import {
   ItemDescription,
   ItemPrice,
   ItemPriceValue,
-  ItemPriceCurrency
+  ItemPriceCurrency,
+  CartOperationsContainer
 } from './ProductDetail.styled'
 import { LoadingBox, LabelBox } from '../Common.styled'
 import { useAppContext } from '../../libs/context-lib'
@@ -23,6 +24,7 @@ import { APP_ACTIONS } from '../../libs/reducerAction-lib'
 import { getProductById, getRecommendations } from '../../libs/services'
 import { ModelSchema } from '../../libs/models'
 import ProductList from '../ProductList'
+import CartOperations from '../ProductList/CartOperations'
 
 export default function ProductDetail () {
   const { dispatch, state } = useAppContext()
@@ -95,6 +97,9 @@ export default function ProductDetail () {
                     <ItemPriceValue>{state.product.price_per_unit}</ItemPriceValue>
                     <ItemPriceCurrency>$</ItemPriceCurrency>
                   </ItemPrice>
+                  <CartOperationsContainer>
+                    <CartOperations item={state.product}/>
+                  </CartOperationsContainer>
                 </DataContainerText>
               </BodyContainer>
             </>

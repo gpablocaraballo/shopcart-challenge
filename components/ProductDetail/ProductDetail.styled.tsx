@@ -115,3 +115,6 @@ export const ItemPriceValue = styled.div`
 export const ItemPriceCurrency = styled(ItemPriceValue)`
     margin-left: 5px;
 `
+export const CartOperationsContainer = styled.div`
+    width:80px;
+`
