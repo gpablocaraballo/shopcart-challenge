@@ -61,6 +61,7 @@ export default function ProductDetail () {
     if (productId !== '' && (!state.product || state.product.product_id)) {
       loadProductById(productId.toString())
     }
+    setImageFailed(false)
   }, [query])
 
   return (
