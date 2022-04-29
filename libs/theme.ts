@@ -18,7 +18,7 @@ const themeConfig = {
     HeaderBorder: 'black',
     DetailButton: 'blue',
     DetailButtonText: 'white',
-    Background: 'rgba(0, 0, 0, 0.4)',
+    Background: 'rgba(0, 0, 0, 0.7)',
     LabelModal: 'white'
   }
 }

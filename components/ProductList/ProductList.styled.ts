@@ -19,6 +19,7 @@ export const CartContainer = styled.div`
   max-width: ${themeConfig.maxWidthContainerPx}px;
   justify-content: center;
   margin-top: 20px;
+  padding-bottom: 50px;
 `
 
 export const ProductContainer = styled.div`

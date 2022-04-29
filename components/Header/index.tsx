@@ -61,8 +61,9 @@ export default function Header () {
               />
             </CartSide>
         </ContainerNav>
-        {modalVisible && <Modal margin="2%" onBackgroundClick={() => setModalVisible(false) }>
+        {modalVisible && <Modal margin="4%" onBackgroundClick={() => setModalVisible(false) }>
           <ButtonBox onClick={() => setModalVisible(false) }>Cerrar detalle</ButtonBox>
+          <LabelBox style={ { marginTop: '10px' } }large light>Compra total: {getTotal(state.cart)} $</LabelBox>
           <CartList />
         </Modal>}
 
